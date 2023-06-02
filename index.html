@@ -10,35 +10,40 @@
 </head>
 <body>
 
- <!-- Navbar -->
- <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-1 fixed-top">
+    <style>
+        .logo-img {
+        max-height: 45pt;
+
+        }
+    </style>
+    
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg bg-dark navbar-dark py-1 fixed-top">
     <div class="container">
-      <a href="#" class="navbar-brand">Luminans</a>
+        <a href="#" class="navbar-brand">
+            <img class="logo-img" src="pictures/luminans.png" alt="Luminans">
+        </a>
 
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navmenu"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-      <div class="collapse navbar-collapse" id="navmenu">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a href="#products" class="nav-link">Products</a>
-          </li>
-          <li class="nav-item">
-            <a href="offers.html" class="nav-link">Offers</a>
-          </li>
-          <li class="nav-item">
-            <a href="connect.html" class="nav-link">Let's connect</a>
-          </li>
-        </ul>
-      </div>
+        <div class="collapse navbar-collapse" id="navmenu">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a href="#products" class="nav-link">Products</a>
+                </li>
+                <li class="nav-item">
+                    <a href="offers.html" class="nav-link">Offers</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#connect" class="nav-link">Let's connect</a>
+                </li>
+            </ul>
+        </div>
     </div>
-  </nav>
+</nav>
+
 
 
 <!--Showcase needs responsiveness fixed-->
@@ -46,9 +51,9 @@
     <video autoplay loop muted style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
         <source src="videos/background.mp4" type="video/mp4">
     </video>
-    <div class="container-fluid glass">
-        <div class="row align-items-center justify-content-center">
-            <div class="col-12 col-sm-6">
+    <div class="container-fluid glass d-flex align-items-center justify-content-center">
+        <div class="row">
+            <div class="col-12 col-sm-6 text-center">
                 <h1 class="display-4" style="white-space: nowrap;">What makes us <span id="typing-effect"></span><span id="typing-line">_</span></h1>
                 <p class="lead my-4">
                     At the heart of our company is a belief in the power of CBD as a natural remedy. 
@@ -58,16 +63,17 @@
                 </p>
                 <button class="button-38" role="button">Discover more</button>
             </div>
-            <div class="col-12 col-sm-6">
-                <img class="img-fluid" src="pictures/testsvg.svg" alt="">
+            <div class="col-12 col-sm-6 text-center">
+                <img class="img-fluid" src="pictures/luminans.png" alt="">
             </div>
         </div>
     </div>
 </section>
 
 
+
 <script>
-    const texts = ["special", "Luminans"];
+    const texts = ["special", "luminans"];
     const typingEffectElement = document.getElementById("typing-effect");
     const typingLineElement = document.getElementById("typing-line");
     let textIndex = 0;
@@ -104,11 +110,6 @@
     type();
     blinkLine();
 </script>
-
-
-
-
-
 
 
 
@@ -190,7 +191,7 @@
 
 
 <!--Newsletter Signup-->
-<section class="bg-light py-5">
+<section id="connect" class="bg-light py-5">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-6">
@@ -208,12 +209,43 @@
     </div>
 </section>
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
 <!-- Footer -->
-    <footer class="p-5 bg-dark text-white text-center position-relative">
-        <div class="container">
-            <p class="lead"> &copy; 2023 Luminans</p>
+<footer class="p-5 bg-dark text-white text-center position-relative">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h4 class="title">Let's Stay in Touch</h4>
+                <div class="let-connect">
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="mailto:contact@luminans.com" class="social-icon"><i class="fas fa-envelope"></i></a>
+                </div>  
+            </div>
+            <div class="col-md-4">
+                <h4>Contact</h4>
+                <p>Questions? Go ahead.</p>
+                <form action="/action_page.php" target="_blank">
+                    <p><input class="input border" type="text" placeholder="Name" name="Name" required></p>
+                    <p><input class="input border" type="text" placeholder="Email" name="Email" required></p>
+                    <p><input class="input border" type="text" placeholder="Subject" name="Subject" required></p>
+                    <p><input class="input border" type="text" placeholder="Message" name="Message" required></p>
+                    <button type="submit" class="button w3-block w3-black">Send</button>
+                </form>
+            </div>
+            <div class="col-md-4">
+                <p class="lead">&copy; 2023 luminans</p>
+            </div>
         </div>
-    </footer>
+    </div>
+</footer>
+
+
+
+
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
