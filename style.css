@@ -55,5 +55,32 @@
 
 /* Glass box */
 
+/* Footer */
+.social-icon {
+  font-size: 24px;
+  color: white;
+  margin-right: 10px;
+  transition: color 0.3s ease-in-out;
+}
 
+.social-icon:hover {
+  color: #10b083; /* Change this to the desired hover color */
+}
+
+.let-connect {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 12%;
+  margin-left: 34%;
+}
+
+.title {
+  font-size: 15px;
+  margin-left: 0%;
+  margin-bottom: 10px;
+}
+
+
+/* Footer */
 
